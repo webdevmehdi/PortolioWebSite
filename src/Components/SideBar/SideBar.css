@@ -1,0 +1,30 @@
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 700px;
+  z-index: 700;
+  height: 100%;
+  background-color: white;
+  transition: all 1s ease-out;
+  border-right: 1px solid rgb(173, 173, 173);
+}
+.Sidebar > img {
+  object-fit: contain;
+  height: 30px;
+}
+.top_sidebar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+.sidebar_logo {
+  object-fit: contain;
+  margin-right: 15px;
+  height: 30px;
+}
