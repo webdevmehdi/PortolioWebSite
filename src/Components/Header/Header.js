@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import "./Header.css";
 import HeaderOptions from "./HeaderOptions/HeaderOptions";
-import InfoIcon from "@mui/icons-material/Info";
-import MenuIcon from "@mui/icons-material/Menu";
 import SideBar from "../SideBar/SideBar";
+import MenuIcon from "@mui/icons-material/Menu";
 const Pageheader = (props) => {
   const [toggleNavBar, setToggleNavBar] = useState(false);
   const handleNavBarMenu = () => {
-    console.log(toggleNavBar);
-    setToggleNavBar((prev) => (prev = !prev));
+    setToggleNavBar(true);
   };
-  const handleSideBarMenu = () => {
-    setToggleNavBar(false);
+  const handleMenuClose = (value) => {
+    console.log(value);
+    setToggleNavBar(value);
   };
   return (
     <>
@@ -20,30 +19,17 @@ const Pageheader = (props) => {
           <span>Logo</span>
         </div>
         <div className="header_right">
-          <HeaderOptions Icon={InfoIcon} title="About" />
-          <HeaderOptions Icon={InfoIcon} title="Our Services" />
-          <HeaderOptions Icon={InfoIcon} title="Our Team" />
+          <div className="header_right_list">
+            <HeaderOptions title="About" />
+            <HeaderOptions title="Our Services" />
+            <HeaderOptions title="Our Team" />
+          </div>
+        </div>
+        <div className="header_right_menu_icon">
+          <HeaderOptions Icon={MenuIcon} iconHandler={handleNavBarMenu} />
         </div>
 
-        {!toggleNavBar ? (
-          <HeaderOptions Icon={MenuIcon} iconHandler={handleNavBarMenu} />
-        ) : (
-          <div>
-            <SideBar modalClosed={handleSideBarMenu} show={toggleNavBar} />
-          </div>
-        )}
-        {/* <div className={!toggleNavBar ? "active_menu" : "inactive_menu"}>
-
-         
-        </div> */}
-        {/*         <div
-          className={
-            toggleNavBar
-              ? "header_right_menu_icon_active"
-              : "header_right_menu_icon_inactive"
-          }
-        >
-        </div> */}
+        <SideBar show={toggleNavBar} modalClosed={handleMenuClose} />
       </nav>
     </>
   );

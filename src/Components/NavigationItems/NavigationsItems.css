@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rubik:wght@800&display=swap");
+.NavigationItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.NavigationTitle {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+}
+.NavigationElement {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.NavigationMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}

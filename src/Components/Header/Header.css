@@ -22,9 +22,6 @@
   background-color: #eef3f8;
   border-radius: 5px;
 }
-.header_right_menu_icon_inactive {
-  display: none;
-}
 
 .header_right_menu_icon {
   display: flex;
@@ -33,41 +30,17 @@
   display: none;
 }
 
-/* display: flex;
-    flex-direction: column;
-    position: fixed;
-    background: blue;
-    top: 0%;
-    right: 0%;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center; */
-.inactive_menu {
-  display: none;
-}
-.header_right_menu_icon {
-  display: flex;
-}
 @media only screen and (min-width: 768px) {
+  .header_right_list{
+    display: flex;
+  }
   .header_right {
     display: flex;
   }
   .header_right_menu_icon {
     display: none;
   }
-  .active_menu {
-    display: none;
-  }
-  .inactive_menu {
-    display: none;
-  }
-  .header_right_menu_icon_active {
-    display: none;
-  }
-  .header_right_menu_icon_inactive {
-    display: none;
-  }
+
   .header {
     display: flex;
     font-size: 15px;

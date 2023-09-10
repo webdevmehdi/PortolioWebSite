@@ -5,7 +5,9 @@ import "./Demo.css";
 const Demo = () => {
   const sectionRef = useRef();
   const observer = new IntersectionObserver(() => {});
-  useEffect(() => {}, []);
+  useEffect(() => {
+    console.log("sectionRef", sectionRef.current);
+  }, []);
 
   return (
     <div>
@@ -16,7 +18,7 @@ const Demo = () => {
           <h2>About Us</h2>
         </section>
         <section className="sectionOurServices">
-          <h2>Our Services</h2>
+          <h3 ref={sectionRef}>Our Services</h3>
         </section>
         <section className="sectionTeam">
           <h2>Our Team</h2>
