@@ -7,25 +7,132 @@
 .main {
   display: flex;
   flex-direction: column;
-  background-color: #121212;
+  background-color: white;
+}
+.carouselTeam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  perspective: 1000px; /* Adjust the perspective value for the desired depth effect */
 }
 
+.memberCard {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  background-color: white;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: center;
+  height: 300px;
+  width: 300px;
+  border: 1px solid whitesmoke;
+  border-radius: 25px;
+  border: 1px solid;
+}
+
+.memberCard img {
+  max-width: 100%; /* Ensure the image does not exceed the card's width */
+  max-height: 100%; /* Ensure the image does not exceed the card's height */
+  object-fit: cover; /* Cover the entire card with the image */
+}
+
+.memberCard:hover {
+  box-shadow: 0px 0px 3px 0px;
+  transform: scale(1, 1);
+}
+
+.sectionHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /*  background-image: url("./Assets/Images/homeImage5.jpg");
+  object-fit: contain;
+  background-size: contain; */
+}
+.sectionHomeLandingPhrase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  gap: 10px;
+}
 .sectionAbout {
-  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 75px 0;
+  min-height: 100vh;
+  background-color: white;
+}
+.sectionOurServices {
+  flex: 1 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: white;
+}
+.sectionAboutInfo {
+  display: flex;
+  flex-direction: column;
+}
+.sectionAboutHeaderContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 45px;
+}
+.sectionAboutContainer {
+  display: flex;
+  flex-direction: column;
+}
+.sectionHeadertitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 20px;
+}
+.sectionOurServicesCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
 }
 
-.sectionOurServices {
-  flex: 1;
+.sectionHeadertitle h2::before,
+.sectionHeadertitle h2::after {
+  content: "";
+  display: inline-block;
+  width: 35px; /* Adjust the width as needed */
+  height: 2px; /* Adjust the height as needed */
+  background-color: #fec016; /* Yellow color */
+  margin: 0 10px; /* Adjust the margin as needed */
+}
+
+.sectionHeadertitle h2::before {
+  margin-right: 20px; /* Adjust the margin-right as needed */
+}
+
+.sectionHeadertitle h2::after {
+  margin-left: 20px; /* Adjust the margin-left as needed */
+}
+.sectionOurServicesHeaderContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+.sectionOurServicesHeadertitle {
+  display: flex;
   align-items: center;
-  min-height: 100vh;
 }
 
 .sectionTeam {

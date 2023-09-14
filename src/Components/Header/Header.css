@@ -2,13 +2,14 @@
   position: sticky;
   top: 0;
   z-index: 600;
-  background-color: black;
-  padding: 5px;
+  background-color: #121212;
+  padding: 12px;
   flex-basis: 0;
   align-items: center;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  justify-content: center;
   color: white;
+  gap: 150px;
 }
 
 .header_mid {

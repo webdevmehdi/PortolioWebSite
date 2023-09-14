@@ -22,6 +22,8 @@ const Pageheader = (props) => {
           <div className="header_right_list">
             <HeaderOptions title="About" />
             <HeaderOptions title="Our Services" />
+            <HeaderOptions title="Contact Us" />
+
             <HeaderOptions title="Our Team" />
           </div>
         </div>
