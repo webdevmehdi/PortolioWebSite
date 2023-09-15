@@ -12,7 +12,7 @@ const SideBar = (props) => {
     <div
       className="Sidebar"
       style={{
-        transform: props.show ? "translateX(0)" : "translateX(100%)", // Adjust the transform values
+        transform: props.show ? "translateX(0)" : "translateX(100%)",
         transition: "transform 2s ease-in-out, opacity 0.5s ease-in-out",
         opacity: props.show ? "1" : "0",
         backgroundColor: "black",
@@ -26,7 +26,6 @@ const SideBar = (props) => {
           <Close />
         </IconButton>
       </div>
-      {/* navigation items */}
       <NavigationItems />
     </div>
   );

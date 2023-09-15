@@ -29,9 +29,9 @@
     color: white;
     align-items: center;
     cursor: pointer;
-    width: 176px;
-    padding: 5px;
-    margin: 10px;
+    width: 125px;
+    padding: 1px;
+    margin: 5px;
   }
 
   .headerOptions__icon {
@@ -43,7 +43,7 @@
   }
 
   .headerOptions__title {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 800;
   }
   .headerOptions__icon {

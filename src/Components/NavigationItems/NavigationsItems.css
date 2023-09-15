@@ -18,6 +18,9 @@
     align-items: center;
     cursor: pointer;
 }
+.NavigationElement:hover {
+  color: darkred!important; /* Change the color to dark red */
+}
 .NavigationMenu {
   display: flex;
   flex-direction: column;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "./CardService.css";
-const CardService = ({image}) => {
+const CardService = ({ image }) => {
   return (
     <>
       <div className="cardService">
@@ -10,7 +10,11 @@ const CardService = ({image}) => {
             <strong>Service</strong>
           </label>
         </div> */}
-        <img src={image} alt="logo" style={{ objectFit: "contain" }} />
+        <img
+          src={image}
+          alt="logo"
+          style={{ objectFit: "contain", width: "100%", height: "100%" }}
+        />
       </div>
     </>
   );

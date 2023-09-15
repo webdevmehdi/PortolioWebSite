@@ -20,17 +20,15 @@ const Pageheader = (props) => {
         </div>
         <div className="header_right">
           <div className="header_right_list">
-            <HeaderOptions title="About" />
             <HeaderOptions title="Our Services" />
-            <HeaderOptions title="Contact Us" />
-
+            <HeaderOptions title="About Us" />
             <HeaderOptions title="Our Team" />
+            <HeaderOptions title="Contact Us" />
           </div>
         </div>
         <div className="header_right_menu_icon">
           <HeaderOptions Icon={MenuIcon} iconHandler={handleNavBarMenu} />
         </div>
-
         <SideBar show={toggleNavBar} modalClosed={handleMenuClose} />
       </nav>
     </>

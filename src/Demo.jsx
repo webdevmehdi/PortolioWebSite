@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Pageheader from "./Components/Header/Header";
 import "./Demo.css";
 import CardService from "./Components/CardService/CardService";
@@ -11,8 +11,15 @@ import aboutusSection from "./Assets/Images/aboutusSection.jpg";
 import homeImage7 from "./Assets/Images/homeImage6.jpg";
 import reactLogo from "./Assets/Images/reactLogo.jpg";
 import messi from "./Assets/Images/Messi.jpg";
+import pythonLogo from "./Assets/Images/pythonLogo.jpg";
+import gitLogo from "./Assets/Images/gitLogo.jpg";
+import typeScript from "./Assets/Images/typeScript.jpg";
+import Button from "@mui/material/Button";
+
 const Demo = () => {
   const sectionRef = useRef();
+
+  const array = [0, 1, 2, 3];
   const observer = new IntersectionObserver(() => {});
   useEffect(() => {
     console.log("sectionRef", sectionRef.current);
@@ -25,15 +32,28 @@ const Demo = () => {
       <main className="main">
         <section className="sectionHome">
           <div className="sectionHomeLandingPhrase">
-            <h1 style={{ fontSize: "35px", fontWeight: "800" }}>
-              WELCOME <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TO
-              <br /> DRYMSOLUTIONS
-            </h1>
-            <span>Crafting Code, Bridging Domains</span>
-            <span>Your Partner in Application Development Excellence</span>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <h1> WELCOME</h1>
+              <h1> TO </h1>
+              <h1>DRYMSOLUTIONS</h1>
+            </div>
+            <span
+              style={{
+                textAlign: "center",
+              }}
+            >
+              Crafting Code, Bridging Domains Your Partner in Application
+              Development Excellence
+            </span>
           </div>
-          <img src={homeImage7} alt="homeImage" style={{ width: "50%" }} />
+          <img src={homeImage7} alt="homeImage" />
         </section>
         <section className="sectionOurServices">
           <div className="sectionHeadertitle">
@@ -46,9 +66,11 @@ const Demo = () => {
             <CardService image={angularLog} />
             <CardService image={nodeJsLogo} />
             <CardService image={reactLogo} />
-
+            <CardService image={pythonLogo} />
             <CardService image={htmlLogo} />
             <CardService image={cssLogo} />
+            <CardService image={gitLogo} />
+            <CardService image={typeScript} />
           </div>
         </section>
         <section className="sectionAbout">
@@ -83,143 +105,45 @@ const Demo = () => {
           </div>
 
           <img
+            className="aboutSectionImage"
             src={aboutusSection}
             alt="aboutus"
-            style={{ width: "40%", objectFit: "contain", margin: "30px" }}
           />
         </section>
         <section className="sectionTeam">
           <h2>Our Team</h2>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
-            {/*  <div className="memberCard"> */}
-            {/*  </div> */}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "10px",
-                width: "30%",
-                margin: "10px",
-              }}
-            >
-              <img
-                src={messi}
-                alt="messi"
-                style={{
-                  borderRadius: "120px",
-                  height: "190px",
-                  width: "190px",
-                }}
-              />
-              <span>Presentation</span>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "10px",
-                width: "30%",
-                margin: "10px",
-              }}
-            >
-              <img
-                src={messi}
-                alt="messi"
-                style={{
-                  borderRadius: "120px",
-                  height: "190px",
-                  width: "190px",
-                }}
-              />
-              <span>Presentation</span>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "10px",
-                width: "30%",
-                margin: "10px",
-              }}
-            >
-              <img
-                src={messi}
-                alt="messi"
-                style={{
-                  borderRadius: "120px",
-                  height: "190px",
-                  width: "190px",
-                }}
-              />
-              <span>Presentation</span>
-            </div>{" "}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "10px",
-                width: "30%",
-                margin: "10px",
-              }}
-            >
-              <img
-                src={messi}
-                alt="messi"
-                style={{
-                  borderRadius: "120px",
-                  height: "190px",
-                  width: "190px",
-                }}
-              />
-              <span>Presentation</span>
-            </div>{" "}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "10px",
-                width: "30%",
-                margin: "10px",
-              }}
-            >
-              <img
-                src={messi}
-                alt="messi"
-                style={{
-                  borderRadius: "120px",
-                  height: "190px",
-                  width: "190px",
-                }}
-              />
-              <span>Presentation</span>
-            </div>{" "}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "10px",
-                width: "30%",
-                margin: "10px",
-              }}
-            >
-              <img
-                src={messi}
-                alt="messi"
-                style={{
-                  borderRadius: "120px",
-                  height: "190px",
-                  width: "190px",
-                }}
-              />
-              <span>Presentation</span>
-            </div>
+          <div className="sectionTeamMain">
+            {array.map((e, index) => (
+              <div key={index} className="sectionTeamCardContainer">
+                <img src={messi} alt="messi" />
+                <span>Presentation</span>
+              </div>
+            ))}
           </div>
+        </section>
+        <section className="sectionContactUs">
+          <div className="sectionHeadertitle">
+            <h2 style={{ display: "flex", alignItems: "center" }}>
+              Contact Us
+            </h2>
+          </div>
+          <form className="sectionContactUsForm">
+            <input
+              className="sectionContactUsInput"
+              placeholder="      Full Name"
+              type="text"
+            />
+            <input
+              className="sectionContactUsInput"
+              placeholder="      Phone Number"
+            />
+            <textarea
+              placeholder="  Message  "
+              type="text"
+              className="sectionContactUsTextArea"
+            />
+            <Button variant="outlined" size="medium">Envoyer</Button>
+          </form>
         </section>
       </main>
     </div>

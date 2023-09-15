@@ -24,6 +24,12 @@ const NavigationItems = () => {
         <li className="NavigationElement">
           <span className="NavigationTitle"> About</span>
         </li>
+        <li className="NavigationElement">
+          <span className="NavigationTitle"> About</span>
+        </li>
+        <li className="NavigationElement">
+          <span className="NavigationTitle"> About</span>
+        </li>
       </ul>
     </nav>
   );

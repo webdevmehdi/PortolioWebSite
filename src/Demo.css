@@ -3,104 +3,73 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.main {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-}
-.carouselTeam {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  overflow: hidden;
-  perspective: 1000px; /* Adjust the perspective value for the desired depth effect */
+.sectionHeadertitle h2::before,
+.sectionHeadertitle h2::after {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 2px;
+  background-color: #fec016;
+  margin: 0 10px;
 }
 
-.memberCard {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 20px;
-  background-color: white;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-  transform-origin: center;
-  height: 300px;
-  width: 300px;
-  border: 1px solid whitesmoke;
-  border-radius: 25px;
-  border: 1px solid;
+.sectionHeadertitle h2::before {
+  margin-right: 20px;
 }
 
-.memberCard img {
-  max-width: 100%; /* Ensure the image does not exceed the card's width */
-  max-height: 100%; /* Ensure the image does not exceed the card's height */
-  object-fit: cover; /* Cover the entire card with the image */
+.sectionHeadertitle h2::after {
+  margin-left: 20px;
 }
-
-.memberCard:hover {
-  box-shadow: 0px 0px 3px 0px;
-  transform: scale(1, 1);
-}
-
 .sectionHome {
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  /*  background-image: url("./Assets/Images/homeImage5.jpg");
-  object-fit: contain;
-  background-size: contain; */
+  min-height: 80vh;
+  flex-direction: column;
 }
 .sectionHomeLandingPhrase {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px;
+  padding: 5% 10%;
   gap: 10px;
+  max-width: 100%;
+  width: 100%;
 }
-.sectionAbout {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 75px 0;
-  min-height: 100vh;
-  background-color: white;
+.sectionHomeLandingPhrase h1 {
+  font-size: 5vw;
+  font-weight: 800;
+  align-self: center;
+  text-align: center;
+}
+element.style {
+  text-align: center;
+  font-weight: 400;
+}
+.sectionHome img {
+  max-width: 100%;
+  /* width: 40%; */
+  /* height: 216px; */
 }
 .sectionOurServices {
-  flex: 1 1;
+  /* flex: 1 1; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 73vh; */
   background-color: white;
-}
-.sectionAboutInfo {
-  display: flex;
-  flex-direction: column;
-}
-.sectionAboutHeaderContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 45px;
-}
-.sectionAboutContainer {
-  display: flex;
-  flex-direction: column;
 }
 .sectionHeadertitle {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
   margin: 20px;
+}
+.aboutSectionImage {
+  width: 80%;
+  margin: auto;
 }
 .sectionOurServicesCards {
   display: flex;
@@ -109,37 +78,262 @@
   margin: 20px;
 }
 
-.sectionHeadertitle h2::before,
-.sectionHeadertitle h2::after {
-  content: "";
-  display: inline-block;
-  width: 35px; /* Adjust the width as needed */
-  height: 2px; /* Adjust the height as needed */
-  background-color: #fec016; /* Yellow color */
-  margin: 0 10px; /* Adjust the margin as needed */
+element.style {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
-
-.sectionHeadertitle h2::before {
-  margin-right: 20px; /* Adjust the margin-right as needed */
+.sectionAbout {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 75px 0;
+  background-color: white;
+  flex-direction: column;
 }
-
-.sectionHeadertitle h2::after {
-  margin-left: 20px; /* Adjust the margin-left as needed */
-}
-.sectionOurServicesHeaderContainer {
+.sectionAboutInfo {
   display: flex;
   flex-direction: column;
 }
-.sectionOurServicesHeadertitle {
-  display: flex;
-  align-items: center;
+element.style {
+  object-fit: cover;
+  margin: 30px;
 }
-
 .sectionTeam {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+}
+element.style {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.sectionTeamMain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.sectionTeamCardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 30%;
+  margin: 10px;
+}
+.sectionAboutInfo img {
+  object-fit: contain;
+  margin: 30px;
+}
+.sectionTeamCardContainer img {
+  border-radius: 120px;
+  height: 100%;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  .aboutSectionImage {
+    margin: auto;
+    max-width: 50%;
+  }
+  .memberCard {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    background-color: white;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transform-origin: center;
+    height: 300px;
+    width: 300px;
+    border: 1px solid whitesmoke;
+    border-radius: 25px;
+    border: 1px solid;
+  }
+
+  .memberCard img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  .memberCard:hover {
+    box-shadow: 0px 0px 3px 0px;
+    transform: scale(1, 1);
+  }
+
+  .sectionHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row;
+  }
+  .sectionHomeLandingPhrase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 10%;
+    gap: 10px;
+    max-width: 100%;
+    width: 100%;
+  }
+  .sectionHomeLandingPhrase h1 {
+    font-size: 3vw;
+    font-weight: 800;
+  }
+
+  .sectionHomeLandingPhrase span {
+    font-size: 2vw;
+  }
+  .sectionHome img {
+    max-width: 50%;
+  }
+  .sectionAbout {
+    display: flex;
+    justify-content: center;
+    padding: 75px 0;
+    min-height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+  }
+  .sectionOurServices {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+  }
+  .sectionAboutInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .sectionAboutHeaderContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 45px;
+  }
+  .sectionAboutContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .sectionHeadertitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 20px;
+  }
+
+  .sectionOurServicesCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .sectionHeadertitle h2::before,
+  .sectionHeadertitle h2::after {
+    content: "";
+    display: inline-block;
+    width: 35px;
+    height: 2px;
+    background-color: #fec016;
+    margin: 0 10px;
+  }
+
+  .sectionHeadertitle h2::before {
+    margin-right: 20px;
+  }
+
+  .sectionHeadertitle h2::after {
+    margin-left: 20px;
+  }
+  .sectionOurServicesHeaderContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .sectionOurServicesHeadertitle {
+    display: flex;
+    align-items: center;
+  }
+
+  .sectionTeam {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .sectionTeamMain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .sectionTeamCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+    margin: 10px;
+  }
+
+  .sectionTeamCardContainer img {
+    border-radius: 50%;
+    height: 80%;
+    width: 80%;
+  }
+
+  .sectionContactUs {
+    display: flex;
+    margin: auto;
+    height: 60vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sectionContactUsInput {
+    height: 7vh;
+    width: 550px;
+    border: 1px solid lightgray;
+    padding: 10px;
+
+  }
+  .sectionContactUsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+    align-items: center;
+    height: 75%;
+  }
+  .sectionContactUsTextArea {
+    height: 130px;
+    width: 542px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid lightgray;
+
+  }
 }
