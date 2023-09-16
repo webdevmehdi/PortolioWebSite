@@ -1,18 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@500&family=Rubik:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@500&family=Roboto+Slab:wght@200;600&family=Rubik:wght@800&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .sectionHeadertitle h2::before,
 .sectionHeadertitle h2::after {
   content: "";
   display: inline-block;
   width: 35px;
   height: 2px;
-  background-color: #fec016;
+  background-color: red;
   margin: 0 10px;
 }
-
+.h3Welcome {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+.h3WelcomeDrymSolutions {
+  font-family: "Montserrat", sans-serif;
+  color: #991c03;
+}
 .sectionHeadertitle h2::before {
   margin-right: 20px;
 }
@@ -25,6 +35,10 @@
   align-items: center;
   min-height: 80vh;
   flex-direction: column;
+  background-image: url("./Assets/Images/homePage.jpg");
+  background-color: #121212;
+  background-size: cover;
+  justify-content: center;
 }
 .sectionHomeLandingPhrase {
   display: flex;
@@ -48,16 +62,12 @@ element.style {
 }
 .sectionHome img {
   max-width: 100%;
-  /* width: 40%; */
-  /* height: 216px; */
 }
 .sectionOurServices {
-  /* flex: 1 1; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* min-height: 73vh; */
   background-color: white;
 }
 .sectionHeadertitle {
@@ -133,6 +143,63 @@ element.style {
   border-radius: 120px;
   height: 100%;
   width: 100%;
+}
+.sectionContactUs {
+  display: flex;
+  margin: auto;
+  height: 60vh;
+  flex-direction: column;
+  align-items: center;
+}
+.sectionContactUsInput {
+  height: 7vh;
+  width: 550px;
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+.sectionContactUsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 80%;
+  align-items: center;
+  height: 75%;
+}
+.sectionContactUsTextArea {
+  height: 130px;
+  width: 542px;
+  resize: none;
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+.sectionContactUsTextArea {
+  height: 130px;
+  width: 80%;
+  resize: none;
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+.sectionContactUsInput {
+  height: 7vh;
+  width: 80%;
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+.sectionHomeWelcomeP {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  width: 90%;
+}
+
+.sectionAboutInfo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.sectionAboutUsInfo{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
 }
 @media only screen and (min-width: 768px) {
   .main {
@@ -256,7 +323,7 @@ element.style {
     display: inline-block;
     width: 35px;
     height: 2px;
-    background-color: #fec016;
+    background-color: red;
     margin: 0 10px;
   }
 
@@ -318,7 +385,6 @@ element.style {
     width: 550px;
     border: 1px solid lightgray;
     padding: 10px;
-
   }
   .sectionContactUsForm {
     display: flex;
@@ -334,6 +400,11 @@ element.style {
     resize: none;
     padding: 10px;
     border: 1px solid lightgray;
-
+  }
+  .sectionHomeWelcomeP {
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    color: white;
+    width: 45%;
   }
 }

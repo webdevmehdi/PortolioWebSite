@@ -3,6 +3,7 @@ import "./Header.css";
 import HeaderOptions from "./HeaderOptions/HeaderOptions";
 import SideBar from "../SideBar/SideBar";
 import MenuIcon from "@mui/icons-material/Menu";
+import logo1 from "../../Assets/Images/logo1.png";
 const Pageheader = (props) => {
   const [toggleNavBar, setToggleNavBar] = useState(false);
   const handleNavBarMenu = () => {
@@ -16,10 +17,12 @@ const Pageheader = (props) => {
     <>
       <nav className="header">
         <div className="header_left">
-          <span>Logo</span>
+          <img src={logo1} alt="logo" className="logoNavBar" />
+          <span className="logoSlogan">DRYM</span>
         </div>
         <div className="header_right">
           <div className="header_right_list">
+            <HeaderOptions title="Home" />
             <HeaderOptions title="Our Services" />
             <HeaderOptions title="About Us" />
             <HeaderOptions title="Our Team" />

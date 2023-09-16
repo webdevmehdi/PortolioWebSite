@@ -4,7 +4,6 @@
   flex-direction: column;
   justify-content: flex-start;
   color: white;
-  margin-right: 20px;
   align-items: center;
   cursor: pointer;
   width: 75px;
@@ -29,9 +28,7 @@
     color: white;
     align-items: center;
     cursor: pointer;
-    width: 125px;
-    padding: 1px;
-    margin: 5px;
+    width: 121px;
   }
 
   .headerOptions__icon {

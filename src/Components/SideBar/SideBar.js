@@ -13,7 +13,7 @@ const SideBar = (props) => {
       className="Sidebar"
       style={{
         transform: props.show ? "translateX(0)" : "translateX(100%)",
-        transition: "transform 2s ease-in-out, opacity 0.5s ease-in-out",
+        transition: "transform 1s ease-in-out, opacity 0.5s ease-in-out",
         opacity: props.show ? "1" : "0",
         backgroundColor: "black",
       }}

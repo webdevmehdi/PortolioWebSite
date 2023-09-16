@@ -5,11 +5,6 @@ const CardService = ({ image }) => {
   return (
     <>
       <div className="cardService">
-        {/* <div className="cardCategorybody">
-          <label style={{ padding: "2px" }}>
-            <strong>Service</strong>
-          </label>
-        </div> */}
         <img
           src={image}
           alt="logo"

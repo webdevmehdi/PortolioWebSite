@@ -8,9 +8,9 @@ import nodeJsLogo from "./Assets/Images/nodeJsLogo.jpg";
 import htmlLogo from "./Assets/Images/htmlLogo.jpg";
 import cssLogo from "./Assets/Images/cssLogo.jpg";
 import aboutusSection from "./Assets/Images/aboutusSection.jpg";
-import homeImage7 from "./Assets/Images/homeImage6.jpg";
+import homePage2 from "./Assets/Images/homePage2.png";
 import reactLogo from "./Assets/Images/reactLogo.jpg";
-import messi from "./Assets/Images/Messi.jpg";
+import cristianoR from "./Assets/Images/cristianoR.jpg";
 import pythonLogo from "./Assets/Images/pythonLogo.jpg";
 import gitLogo from "./Assets/Images/gitLogo.jpg";
 import typeScript from "./Assets/Images/typeScript.jpg";
@@ -40,20 +40,16 @@ const Demo = () => {
                 alignItems: "center",
               }}
             >
-              <h1> WELCOME</h1>
-              <h1> TO </h1>
-              <h1>DRYMSOLUTIONS</h1>
+              <h2 className="h3Welcome"> WELCOME</h2>
+              <h2 className="h3Welcome"> TO </h2>
+              <h1 className="h3WelcomeDrymSolutions">DRYM-SOLUTIONS </h1>
             </div>
-            <span
-              style={{
-                textAlign: "center",
-              }}
-            >
+            <span className="sectionHomeWelcomeP">
               Crafting Code, Bridging Domains Your Partner in Application
               Development Excellence
             </span>
           </div>
-          <img src={homeImage7} alt="homeImage" />
+          {/*           <img src={homePage2} alt="homeImage" /> */}
         </section>
         <section className="sectionOurServices">
           <div className="sectionHeadertitle">
@@ -87,7 +83,7 @@ const Demo = () => {
                 About us
               </h2>
 
-              <p>
+              <span className="sectionAboutUsInfo">
                 At the core of our success in developing applications and
                 delivering innovative solutions lies the expertise of our
                 dynamic team. Our developers bring a wealth of experience and a
@@ -100,7 +96,7 @@ const Demo = () => {
                 team's adaptability, commitment to innovation, and
                 client-centric approach make us trusted partners for clients
                 seeking tailored solutions that solve complex challenges.
-              </p>
+              </span>
             </div>
           </div>
 
@@ -115,7 +111,7 @@ const Demo = () => {
           <div className="sectionTeamMain">
             {array.map((e, index) => (
               <div key={index} className="sectionTeamCardContainer">
-                <img src={messi} alt="messi" />
+                <img src={cristianoR} alt="messi" />
                 <span>Presentation</span>
               </div>
             ))}
@@ -142,7 +138,9 @@ const Demo = () => {
               type="text"
               className="sectionContactUsTextArea"
             />
-            <Button variant="outlined" size="medium">Envoyer</Button>
+            <Button variant="outlined" size="medium">
+              Envoyer
+            </Button>
           </form>
         </section>
       </main>

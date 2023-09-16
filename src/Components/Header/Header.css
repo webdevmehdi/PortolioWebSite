@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@500&family=Roboto+Slab:wght@600&family=Rubik:wght@800&display=swap");
 .header {
   display: flex;
   position: sticky;
@@ -10,7 +11,12 @@
   justify-content: space-between;
   color: white;
 }
-
+.header_left {
+  margin-right: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .header_mid {
   padding: 5px;
   display: flex;
@@ -29,14 +35,25 @@
 .header_right {
   display: none;
 }
-
+.logoNavBar {
+  height: 40px;
+  width: 50px;
+  cursor: pointer;
+}
+.logoSlogan {
+  margin-left: 25px;
+  font-family: "Roboto Slab", serif;
+  font-size: 25px;
+}
 @media only screen and (min-width: 768px) {
   .header_right_list {
     display: flex;
   }
   .header_right {
     display: flex;
+    gap: 17px;
   }
+  
   .header_right_menu_icon {
     display: none;
   }
@@ -45,10 +62,24 @@
     display: flex;
     font-size: 15px;
     width: 100%;
+    height: 20%;
   }
 
   .header_left {
-    margin-left: 5px;
+    margin-right: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logoNavBar {
+    height: 55px;
+    width: 65px;
+    cursor: pointer;
+  }
+  .logoSlogan {
+    margin-left: 25px;
+    font-family: "Roboto Slab", serif;
+    font-size: 25px;
   }
   .header_mid {
     display: inline-block;

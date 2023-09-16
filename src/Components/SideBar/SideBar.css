@@ -8,6 +8,7 @@
   z-index: 700;
   height: 100%;
   background-color: white;
+  overflow: auto;
 }
 .top_sidebar {
   display: flex;
