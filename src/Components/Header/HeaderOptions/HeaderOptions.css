@@ -28,7 +28,7 @@
     color: white;
     align-items: center;
     cursor: pointer;
-    width: 121px;
+    width: 115px;
   }
 
   .headerOptions__icon {
@@ -40,8 +40,8 @@
   }
 
   .headerOptions__title {
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 15px;
+    font-weight: 600;
   }
   .headerOptions__icon {
     object-fit: contain;

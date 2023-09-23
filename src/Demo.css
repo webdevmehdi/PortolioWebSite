@@ -197,8 +197,8 @@ element.style {
   align-items: center;
   padding: 20px;
 }
-.sectionAboutUsInfo{
-  font-family: 'Montserrat', sans-serif;
+.sectionAboutUsInfo {
+  font-family: "Montserrat", sans-serif;
   font-weight: 100;
 }
 @media only screen and (min-width: 768px) {
@@ -308,6 +308,7 @@ element.style {
     justify-content: center;
     width: 80%;
     margin: 20px;
+    font-family: "Roboto Slab", sans-serif;
   }
 
   .sectionOurServicesCards {
@@ -363,22 +364,28 @@ element.style {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 20%;
+    width: 15%;
     margin: 10px;
+    border: 1px solid darkred;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px;
   }
 
   .sectionTeamCardContainer img {
     border-radius: 50%;
-    height: 80%;
+    height: 53%;
     width: 80%;
   }
 
   .sectionContactUs {
     display: flex;
-    margin: auto;
-    height: 60vh;
+    height: 90vh;
     flex-direction: column;
     align-items: center;
+    background: #EADBC8;
+    padding: 15px;
+    margin: unset;
   }
   .sectionContactUsInput {
     height: 7vh;
@@ -389,15 +396,16 @@ element.style {
   .sectionContactUsForm {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 20px;
     width: 80%;
     align-items: center;
-    height: 75%;
+    /* height: 74%; */
+    justify-content: center;
   }
   .sectionContactUsTextArea {
-    height: 130px;
-    width: 542px;
-    resize: none;
+    height: 116px;
+    width: 90%;
+    /* resize: none; */
     padding: 10px;
     border: 1px solid lightgray;
   }

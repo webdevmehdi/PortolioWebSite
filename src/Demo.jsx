@@ -8,29 +8,52 @@ import nodeJsLogo from "./Assets/Images/nodeJsLogo.jpg";
 import htmlLogo from "./Assets/Images/htmlLogo.jpg";
 import cssLogo from "./Assets/Images/cssLogo.jpg";
 import aboutusSection from "./Assets/Images/aboutusSection.jpg";
-import homePage2 from "./Assets/Images/homePage2.png";
 import reactLogo from "./Assets/Images/reactLogo.jpg";
 import cristianoR from "./Assets/Images/cristianoR.jpg";
 import pythonLogo from "./Assets/Images/pythonLogo.jpg";
 import gitLogo from "./Assets/Images/gitLogo.jpg";
+import springBootLogo from "./Assets/Images/springBootLogo.jpg";
 import typeScript from "./Assets/Images/typeScript.jpg";
 import Button from "@mui/material/Button";
+import { TextField } from "@material-ui/core";
 
 const Demo = () => {
   const sectionRef = useRef();
+  const homeRef = useRef(null);
 
+  const ourServicesRef = useRef(null);
+  const aboutUsRef = useRef(null);
+  const teamRef = useRef(null);
+  const contactUsRef = useRef(null);
+
+  const [isInterSecting, setIsInterSecting] = useState();
+  const [sectionDisplay, setSectionDisplay] = useState();
   const array = [0, 1, 2, 3];
-  const observer = new IntersectionObserver(() => {});
+  console.log(isInterSecting);
+  /* 
   useEffect(() => {
-    console.log("sectionRef", sectionRef.current);
-  }, []);
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIsInterSecting(entry.isIntersecting);
+    });
+
+    observer.observe(sectionRef.current);
+  }, []); */
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div>
-      <Pageheader />
-
+      <Pageheader
+        scrollToHome={() => scrollToSection(homeRef)}
+        scrollToOurServices={() => scrollToSection(ourServicesRef)}
+        scrollToAboutUs={() => scrollToSection(aboutUsRef)}
+        scrollToTeam={() => scrollToSection(teamRef)}
+        scrollToContactUs={() => scrollToSection(contactUsRef)}
+      />
       <main className="main">
-        <section className="sectionHome">
+        <section ref={homeRef} className="sectionHome">
           <div className="sectionHomeLandingPhrase">
             <div
               style={{
@@ -49,12 +72,11 @@ const Demo = () => {
               Development Excellence
             </span>
           </div>
-          {/*           <img src={homePage2} alt="homeImage" /> */}
         </section>
-        <section className="sectionOurServices">
+        <section ref={ourServicesRef} className="sectionOurServices">
           <div className="sectionHeadertitle">
             <h2 style={{ display: "flex", alignItems: "center" }}>
-              Our Services
+              Our Expertise
             </h2>
           </div>
           <div className="sectionOurServicesCards">
@@ -67,21 +89,17 @@ const Demo = () => {
             <CardService image={cssLogo} />
             <CardService image={gitLogo} />
             <CardService image={typeScript} />
+            <CardService image={springBootLogo} />
           </div>
         </section>
-        <section className="sectionAbout">
+        <section ref={aboutUsRef} className="sectionAbout">
           <div className="sectionAboutInfo">
             <div className="sectionHeadertitle">
-              <h2
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  padding: "20px",
-                }}
-                ref={sectionRef}
-              >
-                About us
-              </h2>
+              <div className="sectionHeadertitle">
+                <h2 style={{ display: "flex", alignItems: "center" }}>
+                  About us
+                </h2>
+              </div>
 
               <span className="sectionAboutUsInfo">
                 At the core of our success in developing applications and
@@ -106,8 +124,10 @@ const Demo = () => {
             alt="aboutus"
           />
         </section>
-        <section className="sectionTeam">
-          <h2>Our Team</h2>
+        <section ref={teamRef} className="sectionTeam">
+          <div className="sectionHeadertitle">
+            <h2 style={{ display: "flex", alignItems: "center" }}>Our Team</h2>
+          </div>
           <div className="sectionTeamMain">
             {array.map((e, index) => (
               <div key={index} className="sectionTeamCardContainer">
@@ -117,21 +137,33 @@ const Demo = () => {
             ))}
           </div>
         </section>
-        <section className="sectionContactUs">
+        <section ref={contactUsRef} className="sectionContactUs">
           <div className="sectionHeadertitle">
             <h2 style={{ display: "flex", alignItems: "center" }}>
               Contact Us
             </h2>
           </div>
           <form className="sectionContactUsForm">
-            <input
-              className="sectionContactUsInput"
-              placeholder="      Full Name"
-              type="text"
-            />
-            <input
-              className="sectionContactUsInput"
-              placeholder="      Phone Number"
+            <div
+              style={{
+                display: "flex",
+                width: "80%",
+                alignItems: "center",
+                gap: "19px",
+                justifyContent: "center",
+              }}
+            >
+              <TextField label="FullName" variant="standard" />
+              <TextField
+                id="standard-basic"
+                label="LastName"
+                variant="standard"
+              />
+            </div>
+            <TextField
+              style={{ width: "60%" }}
+              label="Email"
+              variant="standard"
             />
             <textarea
               placeholder="  Message  "
