@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import Pageheader from "./Components/Header/Header";
 import "./Demo.css";
 import CardService from "./Components/CardService/CardService";
@@ -9,36 +9,35 @@ import htmlLogo from "./Assets/Images/htmlLogo.jpg";
 import cssLogo from "./Assets/Images/cssLogo.jpg";
 import aboutusSection from "./Assets/Images/aboutusSection.jpg";
 import reactLogo from "./Assets/Images/reactLogo.jpg";
-import cristianoR from "./Assets/Images/cristianoR.jpg";
 import pythonLogo from "./Assets/Images/pythonLogo.jpg";
 import gitLogo from "./Assets/Images/gitLogo.jpg";
 import springBootLogo from "./Assets/Images/springBootLogo.jpg";
 import typeScript from "./Assets/Images/typeScript.jpg";
 import Button from "@mui/material/Button";
 import { TextField } from "@material-ui/core";
+import profilPicMo from "./Assets/Images/mohamed.jpg";
+import profilPicRa from "./Assets/Images/radhwen.jpg";
+import profilPicMe from "./Assets/Images/mehdiPic.jpg";
+import profilcYa from "./Assets/Images/yahya.jpeg";
 
 const Demo = () => {
-  const sectionRef = useRef();
+  /*   const sectionRef = useRef();
+   */
   const homeRef = useRef(null);
-
   const ourServicesRef = useRef(null);
   const aboutUsRef = useRef(null);
   const teamRef = useRef(null);
   const contactUsRef = useRef(null);
 
-  const [isInterSecting, setIsInterSecting] = useState();
-  const [sectionDisplay, setSectionDisplay] = useState();
-  const array = [0, 1, 2, 3];
-  console.log(isInterSecting);
-  /* 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setIsInterSecting(entry.isIntersecting);
-    });
+  /*   const [isInterSecting, setIsInterSecting] = useState();
+   */ /*   const [sectionDisplay, setSectionDisplay] = useState();
+   */ const array = [
+    { picture: profilcYa, nom: "Yahya Mlaouhi" },
+    { picture: profilPicMo, nom: "Mohamed Saghraboui" },
+    { picture: profilPicRa, nom: "Radhwen Nassar" },
+    { picture: profilPicMe, nom: "Mehdi Azizi" },
+  ];
 
-    observer.observe(sectionRef.current);
-  }, []); */
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -80,6 +79,7 @@ const Demo = () => {
             </h2>
           </div>
           <div className="sectionOurServicesCards">
+            {/*   <ListCardService /> */}
             <CardService image={jsLogo} />
             <CardService image={angularLog} />
             <CardService image={nodeJsLogo} />
@@ -131,15 +131,30 @@ const Demo = () => {
           <div className="sectionTeamMain">
             {array.map((e, index) => (
               <div key={index} className="sectionTeamCardContainer">
-                <img src={cristianoR} alt="messi" />
-                <span>Presentation</span>
+                <img src={e.picture} alt="profilPic" />
+                <span
+                  style={{
+                    fontFamily: "'Roboto Slab'",
+                    display: "flex",
+                    flexDirection: "column",
+                    textAlign: "center",
+                  }}
+                >
+                  <span style={{ fontWeight: "600" }}>{e.nom}</span>
+                  <span>Co-Fondateur</span>
+                </span>
               </div>
             ))}
           </div>
         </section>
         <section ref={contactUsRef} className="sectionContactUs">
           <div className="sectionHeadertitle">
-            <h2 style={{ display: "flex", alignItems: "center" }}>
+            <h2
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
               Contact Us
             </h2>
           </div>
@@ -161,7 +176,7 @@ const Demo = () => {
               />
             </div>
             <TextField
-              style={{ width: "60%" }}
+              style={{ width: "40%" }}
               label="Email"
               variant="standard"
             />
