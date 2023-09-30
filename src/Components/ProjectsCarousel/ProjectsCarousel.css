@@ -1,0 +1,140 @@
+.projectCarousel {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 61vh;
+  justify-content: center;
+  width: 90vw;
+  align-items: center;
+}
+.projectCarousel_element {
+ /*  display: flex;
+  align-items: center;
+  height: 45vh;
+  width: 80vw;  
+  justify-content: center;
+  position: absolute;
+  padding: 10px; */
+  display: flex;
+    align-items: center;
+    height: 45vh;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    padding: 10px;
+}
+.projectCarousel_element_information {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+}
+.projectCarousel_element img {
+  object-fit: cover;
+  height: 100%;
+  width: 75%;
+
+}
+
+.rightArrow {
+  position: absolute;
+  top: 89%;
+  right: 29%;
+  z-index: 10;
+  /* font-size: 0px; */
+  background-color: white;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  border: 1px solid darkred;
+  border-radius: 50%;
+}
+.leftArrow {
+  position: absolute;
+  top: 89%;
+  left: 25%;
+  z-index: 10;
+  /* font-size: 20px; */
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid darkred;
+  border-radius: 50%;
+  transform: translate(0, -50%);
+}
+@media only screen and (min-width: 768px) {
+  .projectCarousel {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    height: 61vh;
+    justify-content: center;
+    width: 80vw;
+    align-items: center;
+  }
+  /* .projectCarouselContainer {
+    display: flex;
+    gap: 25px;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    flex: 1;
+    justify-content: center;
+  } */
+  .projectCarousel_element {
+    display: flex;
+    align-items: center;
+    height: 35vh;
+    width: 60vw;
+    justify-content: center;
+    position: absolute;
+    padding: 40px;
+  }
+  .projectCarousel_element_information {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+  }
+  .projectCarousel_element img {
+    object-fit: contain;
+    /* height: 80%; */
+    width: 50%;
+  }
+
+  .rightArrow {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    z-index: 10;
+    font-size: 20px;
+    background-color: white;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    border: 1px solid darkred;
+    border-radius: 50%;
+  }
+  .leftArrow {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    z-index: 10;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid darkred;
+    border-radius: 50%;
+
+    transform: translate(0, -50%);
+  }
+  .current {
+    /* Add your styles for the "current" element here */
+    /* For example, you can change the background color or add a border */
+    background-color: lightblue;
+    border: 2px solid darkblue;
+    /* Add any other styles you want */
+  }
+}

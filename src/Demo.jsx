@@ -13,25 +13,27 @@ import pythonLogo from "./Assets/Images/pythonLogo.jpg";
 import gitLogo from "./Assets/Images/gitLogo.jpg";
 import springBootLogo from "./Assets/Images/springBootLogo.jpg";
 import typeScript from "./Assets/Images/typeScript.jpg";
-import Button from "@mui/material/Button";
-import { TextField } from "@material-ui/core";
-import profilPicMo from "./Assets/Images/mohamed.jpg";
+
+import profilPicMo from "./Assets/Images/mohamedS.jpg";
 import profilPicRa from "./Assets/Images/radhwen.jpg";
 import profilPicMe from "./Assets/Images/mehdiPic.jpg";
 import profilcYa from "./Assets/Images/yahya.jpeg";
-
+import logo from "./Assets/Images/logo1.png";
+import project1 from "./Assets/Images/project1.png";
+import dockerLogo from "./Assets/Images/dockerLogo.jpg";
+import ProjectsCarousel from "./Components/ProjectsCarousel/ProjectsCarousel";
+import ContactUsForm from "./Components/ContactUs/ContactUsForm";
 const Demo = () => {
   /*   const sectionRef = useRef();
    */
+
   const homeRef = useRef(null);
   const ourServicesRef = useRef(null);
   const aboutUsRef = useRef(null);
   const teamRef = useRef(null);
   const contactUsRef = useRef(null);
 
-  /*   const [isInterSecting, setIsInterSecting] = useState();
-   */ /*   const [sectionDisplay, setSectionDisplay] = useState();
-   */ const array = [
+  const array = [
     { picture: profilcYa, nom: "Yahya Mlaouhi" },
     { picture: profilPicMo, nom: "Mohamed Saghraboui" },
     { picture: profilPicRa, nom: "Radhwen Nassar" },
@@ -90,6 +92,7 @@ const Demo = () => {
             <CardService image={gitLogo} />
             <CardService image={typeScript} />
             <CardService image={springBootLogo} />
+            <CardService image={dockerLogo} />
           </div>
         </section>
         <section ref={aboutUsRef} className="sectionAbout">
@@ -124,6 +127,15 @@ const Demo = () => {
             alt="aboutus"
           />
         </section>
+        <section className="sectionOurProjects">
+          <div className="sectionHeadertitle">
+            <h2 style={{ display: "flex", alignItems: "center" }}>
+              Our Projects
+            </h2>
+          </div>
+
+          <ProjectsCarousel /* projects={projects} */ />
+        </section>
         <section ref={teamRef} className="sectionTeam">
           <div className="sectionHeadertitle">
             <h2 style={{ display: "flex", alignItems: "center" }}>Our Team</h2>
@@ -138,10 +150,14 @@ const Demo = () => {
                     display: "flex",
                     flexDirection: "column",
                     textAlign: "center",
+                    width: "100%",
                   }}
                 >
                   <span style={{ fontWeight: "600" }}>{e.nom}</span>
-                  <span>Co-Fondateur</span>
+                  <span>
+                    Co-Founder <br />
+                    FullStack Developper specialized in MERN
+                  </span>
                 </span>
               </div>
             ))}
@@ -158,39 +174,39 @@ const Demo = () => {
               Contact Us
             </h2>
           </div>
-          <form className="sectionContactUsForm">
-            <div
-              style={{
-                display: "flex",
-                width: "80%",
-                alignItems: "center",
-                gap: "19px",
-                justifyContent: "center",
-              }}
-            >
-              <TextField label="FullName" variant="standard" />
-              <TextField
-                id="standard-basic"
-                label="LastName"
-                variant="standard"
-              />
-            </div>
-            <TextField
-              style={{ width: "40%" }}
-              label="Email"
-              variant="standard"
-            />
-            <textarea
-              placeholder="  Message  "
-              type="text"
-              className="sectionContactUsTextArea"
-            />
-            <Button variant="outlined" size="medium">
-              Envoyer
-            </Button>
-          </form>
+          <ContactUsForm />
         </section>
       </main>
+      <footer className="sectionFooter">
+        <h1 className="sloganfooter">
+          Your IT Partner Where Experts Converge Across Diverse Domains
+        </h1>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div className="left_footer">
+              <img style={{ height: "40px" }} src={logo} alt="logoSolutions" />
+              <span>DRYM</span>
+            </div>
+
+            <span style={{ fontWeight: "400" }}>
+              2023 © Copyright DRYM-Solutions
+            </span>
+          </div>
+
+          <div className="right_footer">
+            <span className="footer_icon">Home</span>
+            <span className="footer_icon">About Us</span>
+            <span className="footer_icon">Our Expertise</span>
+            <span className="footer_icon">Our Projects</span>
+            <span className="footer_icon">Contact Us</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

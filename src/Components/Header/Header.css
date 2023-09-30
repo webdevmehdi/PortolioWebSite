@@ -77,9 +77,10 @@
     cursor: pointer;
   }
   .logoSlogan {
-    margin-left: 25px;
-    font-family: "Roboto Slab", sans-serif;
+    margin-left: 15px;
+    font-family: "Roboto Slab";
     font-size: 20px;
+    font-weight: 600;
   }
   .header_mid {
     display: inline-block;
